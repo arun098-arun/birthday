@@ -11,12 +11,10 @@
       text-align: center;
       margin: 0;
       padding: 0;
-      overflow: hidden;
     }
 
     .container {
       padding: 20px;
-      position: relative;
     }
 
     /* Keyframes for sliding text */
@@ -42,170 +40,86 @@
       }
     }
 
-    .title, .subtitle, .message, .cake, .thank-you p {
-      animation-duration: 2s;
-      animation-fill-mode: forwards;
-      opacity: 0;
-      margin: 20px 0;
-    }
-
+    /* Title, subtitle, and message styles */
     .title {
       color: orange;
       font-size: 36px;
       font-weight: bold;
+      animation: slide-in-left 2s ease-out forwards;
+      opacity: 0;
+      margin-top: 20px;
     }
 
     .subtitle {
       color: green;
       font-size: 24px;
-    }
-
-    .message {
-      color: #32CD32; /* Lime Green */
-      font-size: 24px;
-      text-shadow: 1px 1px 2px #000;
-    }
-
-    /* Add Flexbox to align the cake images vertically */
-    .images-container {
-      display: flex;
-      flex-direction: column; /* Stack images vertically */
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      margin-top: 30px;
-    }
-
-    .cake {
-      width: 300px;
-      height: auto;
-      opacity: 0;
-      margin: 15px 0; /* Space between the images */
-    }
-
-    /* Adjust text style and layout for thank-you messages */
-    .thank-you {
-      color: white;
-      font-size: 22px;
-      font-weight: bold;
-      text-align: center;
-      max-width: 600px;
       margin-top: 20px;
-    }
-
-    .thank-you p {
-      margin: 15px 0;
-    }
-
-    /* Adding sliding animation to each line with delays and alternate directions */
-    .title {
-      animation: slide-in-left 2s ease-out forwards;
-      animation-delay: 0s;
-    }
-
-    .subtitle {
       animation: slide-in-right 2s ease-out forwards;
+      opacity: 0;
       animation-delay: 2s;
     }
 
     .message {
+      color: yellow;
+      font-size: 24px;
+      margin-top: 20px;
+      text-shadow: 1px 1px 2px #000;
       animation: slide-in-left 2s ease-out forwards;
+      opacity: 0;
       animation-delay: 4s;
     }
 
+    /* Cake image styles */
     .cake {
+      margin: 20px auto;
+      width: 300px;
+      border: 5px solid #FFF;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      opacity: 0;
       animation: slide-in-right 2s ease-out forwards;
       animation-delay: 6s;
     }
 
-    /* Adjusting animations for the thank you text */
+    /* Thank you message styles */
+    .thank-you p {
+      margin: 20px 0;
+      font-size: 22px;
+      font-weight: bold;
+      opacity: 0;
+    }
+
     .thank-you p:nth-child(1) {
-      color: #FF6347; /* Tomato */
+      color: darkred;
       animation: slide-in-left 2s ease-out forwards;
       animation-delay: 8s;
     }
+
     .thank-you p:nth-child(2) {
-      color: #32CD32; /* Lime Green */
+      color: green;
       animation: slide-in-right 2s ease-out forwards;
       animation-delay: 10s;
     }
+
     .thank-you p:nth-child(3) {
-      color: #ff0000; /* Red */
       animation: slide-in-left 2s ease-out forwards;
       animation-delay: 12s;
     }
+
     .thank-you p:nth-child(4) {
-      color: #8A2BE2; /* BlueViolet */
+      color: red;
       animation: slide-in-right 2s ease-out forwards;
       animation-delay: 14s;
     }
-
-    /* Mobile responsiveness */
-    @media (max-width: 768px) {
-      .title {
-        font-size: 28px; /* Smaller title */
-      }
-
-      .subtitle, .message {
-        font-size: 18px; /* Smaller subtitle and message */
-      }
-
-      .images-container {
-        flex-direction: column; /* Stack images vertically */
-        justify-content: center;
-      }
-
-      .cake {
-        width: 80%; /* Reduce image size */
-        margin-bottom: 20px;
-      }
-
-      .thank-you {
-        font-size: 18px; /* Smaller font for thank-you messages */
-        max-width: 100%; /* Allow text to fit on smaller screens */
-        transform: translate(-50%, -40%);
-      }
-
-      .thank-you p {
-        margin: 15px 0;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .title {
-        font-size: 24px;
-      }
-
-      .subtitle, .message {
-        font-size: 16px;
-      }
-
-      .thank-you p {
-        font-size: 16px;
-        margin: 12px 0;
-      }
-
-      .cake {
-        width: 90%;
-      }
-    }
-
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Text content displayed line by line -->
     <h1 class="title">🎉🎁 Happy Birthday Paapa 🎁🎉</h1>
     <p class="subtitle">Nannu marchipothe samputha 😜</p>
     <p class="message">100 years happy ga brathuku roju natho matladuthu 😁❤</p>
-
-    <!-- Image container to display both images vertically -->
-    <div class="images-container">
-      <img src="cake_image.png" alt="Birthday Cake" class="cake">
-      <img src="vathsalya.png" alt="Vathsalya" class="cake">
-    </div>
-
-    <!-- Thank you messages, now centered below the images -->
+    <img src="cake_image.png" alt="Birthday Cake" class="cake"> <br>
+    <img src="vathsalya.png" alt="Vathsalya" class="cake">
     <div class="thank-you">
       <p>Thank you paapa for being My Biggest Supporter 🫂🤗</p>
       <p>Thank you paapa for Caring me 🫠🥰</p>
