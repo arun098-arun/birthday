@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      background-color: #ADD8E6; /* Light blue background */
+      font-family: "Comic Sans MS", sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Prevents overflow when sliding text */
+    }
+
+    .container {
+      padding: 20px;
+      position: relative; /* To position text in the middle */
+    }
+
+    /* Keyframes for sliding text */
+    @keyframes slide-in-left {
+      0% {
+        transform: translateX(-100%); /* Start from the left */
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slide-in-right {
+      0% {
+        transform: translateX(100%); /* Start from the right */
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .title, .subtitle, .message, .cake, .thank-you p {
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+      margin: 20px 0;
+    }
+
+    .title {
+      color: orange;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      color: green;
+      font-size: 24px;
+    }
+
+    .message {
+      color: #32CD32; /* Lime Green */
+      font-size: 24px;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    /* Add Flexbox to align the cake images side by side */
+    .images-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      margin-top: 30px;
+    }
+
+    .cake {
+      width: 300px;
+      height: auto;
+      opacity: 0;
+    }
+
+    /* Adjust text style and layout for thank-you messages */
+    .thank-you {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Center the text in the middle of the images */
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+      max-width: 600px; /* Ensure the thank-you text fits */
+    }
+
+    .thank-you p {
+      margin: 10px 0;
+    }
+
+    /* Adding sliding animation to each line with delays and alternate directions */
+    .title {
+      animation: slide-in-left 2s ease-out forwards;
+      animation-delay: 0s;
+    }
+
+    .subtitle {
+      animation: slide-in-right 2s ease-out forwards;
+      animation-delay: 2s;
+    }
+
+    .message {
+      animation: slide-in-left 2s ease-out forwards;
+      animation-delay: 4s;
+    }
+
+    .cake {
+      animation: slide-in-right 2s ease-out forwards;
+      animation-delay: 6s; /* Delay for the cake image */
+    }
+
+    /* Adjusting animations for the thank you text */
+    .thank-you p:nth-child(1) {
+      color: #FF6347; /* Tomato */
+      animation: slide-in-left 2s ease-out forwards;
+      animation-delay: 8s;
+    }
+    .thank-you p:nth-child(2) {
+      color: #32CD32; /* Gold */
+      animation: slide-in-right 2s ease-out forwards;
+      animation-delay: 10s;
+    }
+    .thank-you p:nth-child(3) {
+      top: 50%;
+      color: #ff0000; /* Lime Green */
+      animation: slide-in-left 2s ease-out forwards;
+      animation-delay: 12s;
+    }
+    .thank-you p:nth-child(4) {
+      color: #8A2BE2; /* BlueViolet */
+      animation: slide-in-right 2s ease-out forwards;
+      animation-delay: 14s;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">🎉🎁 Happy Birthday Paapa 🎁🎉</h1>
+    <p class="subtitle">Nannu marchipothe samputha 😜</p>
+    <p class="message">100 years happy ga brathuku roju natho matladi 😁❤</p>
+
+    <!-- Image container to display both images side by side -->
+    <div class="images-container">
+      <img src="C:\!major paper\cake_image.png" alt="Birthday Cake" class="cake">
+      <img src="C:\!major paper\vathsalya.png" alt="Vathsalya" class="cake">
+    </div>
+
+    <!-- Thank you messages, now centered between the two images -->
+    <div class="thank-you">
+      <p>Thank you paapa for being My Biggest Supporter 🫂🤗</p>
+      <p>Thank you paapa for Caring me 🫠🥰</p>
+      <p>Thank you paapa for Staying at my good and bad times.. 🥺🥰</p>
+      <p>I Love you so much paapa my bestiee 🥰😘</p>
+    </div>
+  </div>
+</body>
+</html>
